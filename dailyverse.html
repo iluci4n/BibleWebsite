@@ -139,7 +139,6 @@ a {
         <a href="#" class="logo">Bible Daily <b>Verse</b></a>
         <div class="header-right">
           <a class="active" href="./index.html">Home</a>
-          <a onclick="myFunction()" class="button" id="darkModeButton">Dark Mode</a>
         </div>
       </div>
 
@@ -153,19 +152,6 @@ a {
       </div>
 
       <script>
-        function myFunction() {
-          var element = document.body;
-          var button = document.getElementById("darkModeButton");
-      
-          element.classList.toggle("dark-mode");
-      
-          if (element.classList.contains("dark-mode")) {
-            button.innerText = "White Mode";
-          } else {
-            button.innerText = "Dark Mode";
-          }
-        }
-      
 function applyHighlight(color) {
   var selection = window.getSelection();
   if (selection.rangeCount > 0) {

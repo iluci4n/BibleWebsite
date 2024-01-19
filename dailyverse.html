@@ -89,6 +89,33 @@ a {
   color: black;
 }
 
+          .sidebar {
+            height: 100%;
+            width: 200px;
+            position: fixed;
+            background-color: #f1f1f1;
+            overflow-x: hidden;
+            padding-top: 20px;
+        }
+
+        .sidebar a {
+            padding: 10px 15px;
+            text-decoration: none;
+            font-size: 18px;
+            color: black;
+            display: block;
+        }
+
+        .sidebar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .content {
+            margin-left: 220px;
+            padding: 1px 16px;
+        }
+
 @media screen and (max-width: 500px) {
   .header a {
     float: none;
@@ -203,6 +230,26 @@ function applyHighlight(color) {
             highlightMenu.style.display = 'none';
           }
         });
+
+                    document.addEventListener('mouseup', function (event) {
+                var selection = window.getSelection();
+
+                if (selection.toString()) {
+                    var highlightMenu = document.getElementById('highlightContextMenu');
+                    highlightMenu.style.display = 'block';
+                    highlightMenu.style.left = event.pageX + 'px';
+                    highlightMenu.style.top = event.pageY + 'px';
+                } else {
+                    document.getElementById('highlightContextMenu').style.display = 'none';
+                }
+            });
+
+            document.addEventListener('mousedown', function (event) {
+                var highlightMenu = document.getElementById('highlightContextMenu');
+                if (event.target !== highlightMenu && !highlightMenu.contains(event.target)) {
+                    highlightMenu.style.display = 'none';
+                }
+            });
       </script>       
 
 </body>

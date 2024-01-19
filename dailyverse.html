@@ -90,12 +90,9 @@ a {
 }
 
 .sidebar {
-    height: 100%;
     width: 200px;
     background-color: #f1f1f1;
-    overflow-x: hidden;
     padding-top: 20px;
-    position: fixed;
 }
 
 .sidebar a {
@@ -113,12 +110,23 @@ a {
 
 .content {
     flex: 1;
-    margin-left: 220px;
-    padding: 1px 16px;
+    padding: 25px;
 }
 
 .verse-container {
     margin-top: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        position: static;
+    }
+
+    .content {
+        flex: 1;
+        margin-left: 0;
+    }
 }
 
 @media screen and (max-width: 500px) {
@@ -173,9 +181,9 @@ a {
     </div>
   
     <div class="header">
-        <a href="#" class="logo">Bible Daily <b>Verse</b></a>
+        <a class="active" href="./index.html">Home</a>
+        <a href="/dailyverse" class="logo">Bible Daily <b>Verse</b></a>
         <div class="header-right">
-          <a class="active" href="./index.html">Home</a>
         </div>
       </div>
 

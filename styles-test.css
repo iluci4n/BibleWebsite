@@ -8,7 +8,7 @@ body {
 
 .header-content {
     max-width: 800px; /* Adjust the maximum width of the header content */
-    margin: 0 auto;
+    margin: 40px auto 0; /* Top margin increased to 40px */
     text-align: center;
     padding: 50px 0; /* Adjust the padding as needed */
     display: flex;

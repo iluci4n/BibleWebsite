@@ -35,6 +35,11 @@ body {
     margin-right: 20px; /* Adjust the spacing between navigation items */
 }
 
+#about-content {
+    width: 60%; /* Adjust the width as needed */
+    margin-top: 20px; /* Add some top margin for spacing */
+}
+
 .navigation a {
     text-decoration: none;
     color: #333; /* Choose your text color */

@@ -16,7 +16,7 @@
             <nav>
                 <ul class="navigation">
                     <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
+                    <li><a href="#" id="about-link">About</a></li>
                     <li><a href="#">Services</a></li>
                     <li><a href="#">Contact</a></li>
                 </ul>
@@ -24,7 +24,22 @@
         </div>
     </header>
 
+    <section id="about-content" style="display: none;">
+        <div class="about-section">
+            <h2>About Us</h2>
+            <p>This is some information about your website.</p>
+            <!-- Add more content as needed -->
+        </div>
+    </section>
+
     <!-- Other content of your website goes here -->
+
+    <script>
+        document.getElementById('about-link').addEventListener('click', function() {
+            var aboutContent = document.getElementById('about-content');
+            aboutContent.style.display = (aboutContent.style.display === 'none' || aboutContent.style.display === '') ? 'block' : 'none';
+        });
+    </script>
 
 </body>
 </html>
